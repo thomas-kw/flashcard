@@ -41,7 +41,8 @@ def flip_card():
 def is_known():
     to_learn.remove(current_card)
     df = pd.DataFrame(to_learn)
-    df.to_csv("data/words_to_learn.csv")
+    df.to_csv("data/words_to_learn.csv", index=False)
+    #index False removes annoying indexes in dataframe to csv
     next_card()
 
 
